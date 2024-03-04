@@ -2,7 +2,7 @@
 
 // Задача 1
 
-let user = { };
+const user = { };
 user.name = 'John';
 user.surname = 'Smith';
 user.name = 'Pete';
@@ -24,5 +24,5 @@ const salaries = {
     Pete: 130
 }
 
-let sum = salaries.John + salaries.Ann + salaries.Pete
+const sum = salaries.John + salaries.Ann + salaries.Pete
 console.log(sum)
