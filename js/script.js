@@ -1,16 +1,16 @@
 'use strict'
 
-let number1 = Number (prompt('Введіть перше число'));
+const number1 = Number (prompt('Введіть перше число'));
 if (isNaN (number1)) {
     alert('Введіть вірне значення для першого числа');
 }
 
-let number2 = Number (prompt('Введіть друге число'));
+const number2 = Number (prompt('Введіть друге число'));
 if (isNaN(number2)) {
     alert('Введіть вірне значення для другого числа');
 }
 
-let number3 = Number (prompt('Введіть третє число'));
+const number3 = Number (prompt('Введіть третє число'));
 if (isNaN(Number(number3))) {
     alert('Введіть вірне значення для третього числа');
 }
