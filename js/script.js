@@ -14,5 +14,5 @@ switch (true) {
         alert('number is Ba_NaN');
         break;
     default:
-        alert(`OK! ${numOrStr}`);
+        alert(`OK!`);
 }
