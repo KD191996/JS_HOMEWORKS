@@ -1,5 +1,6 @@
 'use strict'
 
+
 // 1.
 // let a = '';
 //
@@ -107,25 +108,15 @@
 
 // 12.
 
+for (let a = 1; a <= 10; a++) {
 
-for (let b = 0; b <= 10; b++) {
+    for (let b = 1; b <= 10; b++){
+       let sum = b * a;
 
-    for (let a = 1; a <= 10; a++){
-       let result = b * a;
-        console.log( result)
+        console.log( a + '*' + b + '=' + sum + '\n')
     }
 
 }
 
 
-for (let i = 1; i <= 10; i++) {
-    let row = ''; // Змінна для зберігання рядка таблиці
 
-    for (let j = 1; j <= 10; j++) {
-        // Додаємо множник і результат множення до рядка
-        row += `${i} * ${j} = ${i * j}\t`;
-    }
-
-    // Виводимо рядок на консоль
-    console.log(row);
-}
