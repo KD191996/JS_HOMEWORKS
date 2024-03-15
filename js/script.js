@@ -17,7 +17,7 @@ alert(a)
 
 // 2.
 for (let b = 10; b <= 20; b++ ) {
-    const square = b * 2;
+    const square = b * b;
     console.log('квадрат числа' + ' ' + b + ' ' + 'дорівнює' + ' ' + square)
 }
 
