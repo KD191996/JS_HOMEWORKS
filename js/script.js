@@ -2,7 +2,7 @@
 
 const arr = [1, 2, 3, 4, -1, -2, -3, -4];
 
-function foo (arr) {
+const foo = function (arr) {
     const positivArr = [];
 
     if (arr.length === 0) {
@@ -22,5 +22,5 @@ function foo (arr) {
     }
 }
 
-const result = foo (arr)
-alert(result)
+
+alert(foo(arr))
