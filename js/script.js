@@ -6,7 +6,7 @@ const symbol = prompt('Введіть символ для доповнення �
 const right = prompt('Символ додати справа?(так/ні)') === 'так'
 
 
-function padString (string, length, symbol, right = true) {
+const padString = function (string, length, symbol, right = true) {
      if (typeof string !== 'string') {
          return 'Помилка. Значення в рядку має відповідати типу данних string'
      }
@@ -33,9 +33,9 @@ function padString (string, length, symbol, right = true) {
     }
 }
 
-const result = padString(string, length, symbol, right)
 
-alert(result)
+
+alert(padString(string, length, symbol, right))
 
 
 
