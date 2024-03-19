@@ -1,30 +1,30 @@
 'use strict'
 
 const string = prompt('Введіть рядок');
-const lenght = +prompt(' Введіть число, яке буде визначати кількість символів');
+const length = +prompt(' Введіть число, яке буде визначати кількість символів');
 const symbol = prompt('Введіть символ для доповнення рядка')
 const right = prompt('Символ додати справа?(так/ні)') === 'так'
 
 
-function padString (string, lenght, symbol, right = true) {
-     if (string === undefined) {
-         return 'Помилка. Відсутнє значення в рядку'
+function padString (string, length, symbol, right = true) {
+     if (typeof string !== 'string') {
+         return 'Помилка. Значення в рядку має відповідати типу данних string'
      }
 
-     if (lenght === undefined) {
-         return 'Помилка. Відсутнє число, яке визначає довжину рядка'
+     if (typeof length !== 'number'|| isNaN(length))  {
+         return 'Помилка. Значення в рядку має відповідати типу данних number'
      }
 
-    if (string.length >= lenght) {
-        return string.substring(0 , lenght);
+    if (string.length >= length) {
+        return string.substring(0 , length);
     }
 
     if (symbol.length !== 1) {
         return 'Помилка. Символ повинен бути довжиною в 1 символ.';
     }
 
-    const differLenght = lenght - string.length;
-    const newString = symbol.repeat(differLenght);
+    const differLength = length - string.length;
+    const newString = symbol.repeat(differLength);
 
     if (right) {
         return string + newString;
@@ -33,7 +33,7 @@ function padString (string, lenght, symbol, right = true) {
     }
 }
 
-const result = padString(string, lenght, symbol, right)
+const result = padString(string, length, symbol, right)
 
 alert(result)
 
