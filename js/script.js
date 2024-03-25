@@ -15,13 +15,27 @@ for (let a = 10; a <= 100; a += 10) {
 
 // 3.
 
-const N= +prompt('Введіть ціле число ');
-
-for (let M = 1;  Math.pow(M, 2) <= N && M <= 100; M++) {
-    console.log("Цілі числа від 1 до 100, квадрат яких не перевищує " + N + ":" + M)
-}
+// const N= +prompt('Введіть ціле число ');
+//
+// for (let M = 1;  Math.pow(M, 2) <= N && M <= 100; M++) {
+//     console.log("Цілі числа від 1 до 100, квадрат яких не перевищує " + N + ":" + M)
+// }
 
 // 4.
 const integer= +prompt('Введіть ціле число ');
+let result = '';
 
-for (let s = 1; s)
+if (integer <= 1) {
+    result = 'Помилка'
+} else {
+    for (let s = 2; s <= Math.sqrt(integer); s++) {
+        if (integer % s === 0) {
+            result = integer + ' ' + 'не є простим числом'
+            break
+        }
+        result = integer + ' ' + 'є простим числом'
+    }
+}
+
+
+alert(result)
