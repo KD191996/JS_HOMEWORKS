@@ -11,6 +11,7 @@ console.log(getFactorial(5));
 
 const getFactorial1 = (n) => (n === 0 || n === 1 ? 1 : n * getFactorial(n - 1));
 console.log(getFactorial1(5));
+
 // Task #2
 function pow(num, degree) {
   if (degree === 0) {
