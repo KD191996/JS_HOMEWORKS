@@ -10,6 +10,7 @@
   },
   "rules": {
     "no-console": 0,
-    "func-names": "off"
+    "func-names": "off",
+    "quotes": ["error", "single", { "avoidEscape": true }]
   }
 }
