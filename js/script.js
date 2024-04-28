@@ -1,6 +1,6 @@
 (() => {
-  const newSum = function () {
-    let sum = 0;
+  const newSum = function (param = 0) {
+    let sum = param;
 
     return function (number) {
       sum += number;
