@@ -10,6 +10,9 @@
   },
   "rules": {
     "no-console": 0,
-    "func-names": "off"
+    "func-names": "off",
+    "wrap-iife": ["error", "any"],
+    "no-extra-parens": ["error", "functions"],
+    "no-unused-expressions": "error"
   }
 }
