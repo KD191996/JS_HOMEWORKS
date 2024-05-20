@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quibusdam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quibusdam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quibusdam.</p>
+<main>
+    <div class="categories">
+        <!-- Лівий блок з переліком категорій -->
+        <ul>
+            <li data-category-id="1">Верхній одяг</li>
+            <li data-category-id="2">Взуття</li>
+            <li data-category-id="3">Аксесуари</li>
+        </ul>
+    </div>
+
+    <div class="products">
+        <!-- Блок зі списком товарів -->
+        <ul>
+            <!-- Список товарів виводиться тут динамічно за допомогою JavaScript -->
+        </ul>
+    </div>
+
+    <div class="product-details">
+        <!-- Правий блок з інформацією про товар та кнопкою "купити" -->
+        <h2>Product Details</h2>
+        <p>Name: <span id="productName"></span></p>
+        <p>Price: <span id="productPrice"></span></p>
+        <button id="buyButton">Buy</button>
+    </div>
+</main>
 
 <script src="./js/script.js"></script>
 </body>
