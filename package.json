@@ -20,6 +20,8 @@
     "globals": "^15.0.0"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "lodash": "^4.17.21",
     "prettier": "^3.2.5"
   }
