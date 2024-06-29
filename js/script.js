@@ -1,26 +1,41 @@
-import Building from "./Building.js";
-import Human from "./Human.js";
-import Apartment from "./Apartment.js";
+import Post from "./Post.js";
+import ErrorHandler from "./ErrorHandler.js";
 
-const apartment1 = new Apartment();
-const apartment2 = new Apartment();
+function displayError(message) {
+  const errorElement = document.getElementById("error");
+  errorElement.textContent = message;
+}
 
-const person1 = new Human("John", "Man");
-const person2 = new Human("Alice", "Woman");
-const person3 = new Human("Alex", "Man");
+function clearError() {
+  const errorElement = document.getElementById("error");
+  errorElement.textContent = "";
+}
 
-apartment1.addResident(person1);
-apartment1.addResident(person2);
-apartment2.addResident(person3);
+function handleSearch() {
+  const postIdInput = document.getElementById("postId");
+  const postId = postIdInput.value;
+  const postElement = document.getElementById("post");
+  const commentsElement = document.getElementById("comments");
 
-const building = new Building(2);
+  const errorHandler = new ErrorHandler(document.getElementById("error"));
+  const post = new Post(postElement, commentsElement);
 
-building.addApartment(apartment1);
-building.addApartment(apartment2);
+  clearError();
+  postElement.innerHTML = "";
+  commentsElement.innerHTML = "";
 
-// const apartment3 = new Apartment();
-// building.addApartment(apartment3);
+  if (postId < 1 || postId > 100) {
+    errorHandler.displayError("Please enter a valid ID (1-100)");
+    return;
+  }
 
-console.log("Будинок:", building);
-console.log("Квартира 1, Жителі:", apartment1.residents);
-console.log("Квартира 2, Жителі:", apartment2.residents);
+  post
+    .fetchPost(postId)
+    .then((postData) => post.displayPost(postData))
+    .catch((error) => errorHandler.displayError(error.message));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchButton = document.getElementById("searchButton");
+  searchButton.addEventListener("click", handleSearch);
+});

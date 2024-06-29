@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quibusdam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quibusdam.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quibusdam.</p>
+<h1>Search Post by ID</h1>
+<input type="number" id="postId" min="1" max="100" placeholder="Enter post ID (1-100)">
+<button id="searchButton">Search</button>
+<div id="post"></div>
+<div id="comments"></div>
+<div class="error" id="error"></div>
+
 
 <script src="./js/script.js" type="module"></script>
 </body>
